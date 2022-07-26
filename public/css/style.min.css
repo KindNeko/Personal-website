@@ -98,17 +98,17 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 24px;
   overflow-x: hidden;
   color: #23282b;
 }
 
 .title {
-  font-family: "Cinzel Decorative", cursive;
-  font-size: 48px;
+  font-family: "Krona One", sans-serif;
+  font-size: 35px;
   font-weight: 700;
   line-height: 48px;
-  color: #0a0a0a;
+  color: #23282b;
 }
 
 * {
@@ -125,10 +125,14 @@ body {
 }
 
 .container {
-  max-width: 0;
+  width: 75%;
   padding: 0 10px;
   margin: 0 auto;
   overflow: hidden;
+}
+
+h3 {
+  font-weight: bold;
 }
 
 .flex {
@@ -138,18 +142,85 @@ body {
 
 .header__content {
   position: relative;
-  width: 75%;
   float: right;
   height: 100vh;
 }
 
-.main__content {
+.home__info {
+  margin-left: 15px;
+  width: 60%;
+  text-align: justify;
+}
+.home__title {
+  font-size: 35px;
+  padding-bottom: 30px;
+}
+.home__professions {
+  font-size: 36px;
+  padding-bottom: 30px;
+}
+.home__box-image {
+  margin-left: 90px;
+  margin-top: 30px;
+  padding: 15px;
   position: relative;
-  width: 75%;
-  float: right;
-  height: 100vh;
+}
+.home__box-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  border-top: 5px solid #000;
+  border-left: 5px solid #000;
+}
+.home__box-image::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 34px;
+  height: 34px;
+  border-bottom: 5px solid #ffa500;
+  border-right: 5px solid #ffa500;
+}
+.home__text {
+  padding-bottom: 30px;
+}
+.home__hire-me {
+  color: #23282b;
+  font-weight: bold;
+  border-bottom: 2px solid #ffa500;
 }
 
+.name {
+  font-family: "Edu TAS Beginner", cursive;
+  color: #ffa500;
+}
+
+.typing {
+  color: #ffa500;
+  position: relative;
+}
+.typing::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #F5F5F5;
+  border-left: 4px solid #ffa500;
+  animation: typing 3.5s steps(13) infinite;
+}
+
+@keyframes typing {
+  100% {
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+}
 .sidebar {
   position: fixed;
   width: 25%;
@@ -196,9 +267,16 @@ body {
   line-height: 28px;
 }
 
+.logo-decoration {
+  color: #ffa500;
+}
+
 .nav__list {
   text-align: right;
   flex-direction: column;
+}
+.nav__icon {
+  padding-right: 10px;
 }
 .nav__items {
   padding-bottom: 20px;
@@ -210,24 +288,64 @@ body {
   letter-spacing: 4px;
   font-weight: bold;
   position: relative;
+  display: inline-block;
+  border-bottom: 1px solid silver;
+  padding-bottom: 5px;
+  transition: 0.5s;
 }
-.nav__link:hover::after {
-  width: 100%;
-  left: 0;
-}
-.nav__link::after {
-  content: "";
-  background: none repeat scroll 0 0 transparent;
-  bottom: 0;
-  display: block;
-  height: 4px;
-  left: 0;
-  position: absolute;
-  background: linear-gradient(to right, #000 70%, #ffa500 50%);
-  transition: width 0.5s ease 0s, left 0.5s ease 0s;
-  width: 0;
+.nav__link:hover {
+  color: #ffa500;
 }
 
-.logo-decoration {
+.active-link {
   color: #ffa500;
+}
+
+.main__content {
+  position: relative;
+  float: right;
+  height: 100vh;
+}
+
+.about {
+  flex-direction: column;
+  align-items: start;
+  margin-top: 30px;
+  margin-left: 15px;
+}
+.about__box-title {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 50px;
+}
+.about__title {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 48px;
+}
+.about__title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background-color: orange;
+}
+.about__title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 30px;
+  height: 4px;
+  background-color: orange;
+  margin-top: 10px;
+}
+.about__content-titile {
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 15px;
 }
