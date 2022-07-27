@@ -15,6 +15,7 @@
 		rel="stylesheet">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 	<title>Пантелиди Максим</title>
 </head>
 
@@ -29,13 +30,15 @@
 					recusandae praesentium architecto debitis vero, doloremque quos facilis at repellendus ducimus quae. Soluta,
 					autem quam ipsam tempora nulla dolore dolorem adipisci sequi ab labore libero sint. Excepturi fugit labore
 					officiis tempora cumque hic provident deserunt neque ratione dolorum.</p>
-				<a class="home__hire-me" href="#contact">Hire me</a>
+				<button class="home__button" href="#contact">
+					<a class="home__btn-link">More about me</a>
+				</button>
 			</div>
 
 			
 			<div class="home__box-image">
 				<!-- my photo -->
-				<img class="home__images" src="/images/my-photo.png" alt="My photo">
+				<img class="home__images" src="images/my-photo.png" alt="My photo">
 				<!-- // my photo -->
 			</div>
 		</section>
@@ -57,17 +60,17 @@
 				</a>
 			</li>
 			<li class="nav__items"> 
-				<a class="nav__link " href="#">
+				<a class="nav__link " href="#about">
 					<i class="fa fa-user nav__icon"></i> About
 				</a>
 			</li>
 			<li class="nav__items"> 
-				<a class="nav__link" href="#">
+				<a class="nav__link" href="#portfolio">
 					<i class="fa fa-briefcase nav__icon"></i> Portfolio
 				</a>
 			</li>
 			<li class="nav__items"> 
-				<a class="nav__link" href="#">
+				<a class="nav__link" href="#contact">
 					<i class="fa fa-comments nav__icon"></i> Contact
 				</a>
 			</li>
@@ -76,16 +79,18 @@
 </aside>
 
 
-		<section class="about flex content container section-scroll">
+		<section class="about flex content container section-scroll" id="about">
 			<div class="about__content">
 				<div class="about__box-title">
-					<h2 class="about__title title element-scroll-anim">About me</h2>
+					<h2 class="about__title title title-decoration-big element-scroll-anim">About me</h2>
 				</div>
 
 				<div class="about__box-text">
-					<h3 class="about__content-titile element-scroll-anim">I'm Maxim Pantelidi and <span class="title-decoration">Web Developer</span>
+					<h3 class="about__content-titile element-scroll-anim">I'm Maxim Pantelidi and <span
+							class="title-decoration">Web Developer</span>
 					</h3>
-					<p class="about__content-text  element-scroll-anim">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, minus.
+					<p class="about__content-text  element-scroll-anim">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Accusantium, minus.
 						Earum neque, itaque molestias nesciunt eaque hic recusandae illum illo minima, dolorum reiciendis deserunt
 						repellat alias eveniet perspiciatis corrupti aliquam numquam minus ex doloremque quaerat cupiditate! Tempore
 						modi rerum facere. Perspiciatis atque nam nihil officia impedit rerum iusto eveniet quas.</p>
@@ -99,49 +104,49 @@
 								<p class="about__birthday-text">4 june 2000</p>
 							</div>
 						</li>
-	
+
 						<li class="about__items">
 							<div class="about__website my-information__box-title flex element-scroll-anim">
 								<h3 class="about__website-title my-information__title">Website: </h3>
 								<p class="about__website-text">www.domain.com</p>
 							</div>
 						</li>
-	
+
 						<li class="about__items">
 							<div class="about__grade my-information__box-title flex element-scroll-anim">
 								<h3 class="about__grade-title my-information__title">Grade: </h3>
 								<p class="about__grade-text">-</p>
 							</div>
 						</li>
-	
+
 						<li class="about__items">
 							<div class="about__city my-information__box-title flex element-scroll-anim">
 								<h3 class="about__city-title my-information__title">City: </h3>
 								<p class="about__city-text">Penza</p>
 							</div>
 						</li>
-	
+
 						<li class="about__items">
 							<div class="about__age my-information__box-title flex element-scroll-anim">
 								<h3 class="about__age-title my-information__title">Age: </h3>
 								<p class="about__age-text">22</p>
 							</div>
 						</li>
-	
+
 						<li class="about__items">
 							<div class="about__email my-information__box-title flex element-scroll-anim">
 								<h3 class="about__email-title my-information__title">Email: </h3>
 								<p class="about__email-text"> maksim.pantelidi@yandex.ru</p>
 							</div>
 						</li>
-	
+
 						<li class="about__items">
 							<div class="about__phone my-information__box-title flex element-scroll-anim">
 								<h3 class="about__phone-title my-information__title">Phone: </h3>
 								<p class="about__phone-text">+7 (993) 377-20-60</p>
 							</div>
 						</li>
-	
+
 						<li class="about__items">
 							<div class="about__telegram my-information__box-title flex element-scroll-anim">
 								<h3 class="about__telegram-title my-information__title">Telegram: </h3>
@@ -149,8 +154,8 @@
 							</div>
 						</li>
 					</ul>
-	
-	
+
+
 					<div class="about-skills element-scroll-anim">
 						<h3 class="about-skills__big-title">My skill</h3>
 						<ul class="about-skills__list">
@@ -166,23 +171,101 @@
 								<h3 class="about-skills__title">JavaScript</h3>
 								<span class="about-skills__bar"> <span class="about-skills__JavaScript"></span> </span>
 							</li>
-	
+
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<section class="portfolio content container section-scroll" id="portfolio">
+			<div class="portfolio__content">
+				<div class="portfolio__box-title">
+					<h2 class="portfolio__title title title-decoration-big element-scroll-anim">Portfolio</h2>
+				</div>
+
+				<div class="portfolio__project">
+					<h3 class="portfolio__project-title element-scroll-anim">My project:</h3>
+
+					<div class="portfolio__project-grid flex">
+						<ul class="portfolio__list">
+
+							<li class="portfolio__item">
+								<div class="portfolio__site element-scroll-anim">
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint accusantium iusto sed nesciunt
+										consequuntur minima. Esse porro pariatur, ipsum non minima numquam necessitatibus </p>
+								</div>
+							</li>
+
+							<li class="portfolio__item">
+								<div class="portfolio__site element-scroll-anim">
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint accusantium iusto sed nesciunt
+										consequuntur minima. Esse porro pariatur, ipsum non minima numquam necessitatibus </p>
+								</div>
+							</li>
+
+							<li class="portfolio__item">
+								<div class="portfolio__site element-scroll-anim">
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint accusantium iusto sed nesciunt
+										consequuntur minima. Esse porro pariatur, ipsum non minima numquam necessitatibus </p>
+								</div>
+							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</section>
 
+		<section class="contact content container section-scroll" id="contact">
+			<div class="contact__content">
+				<div class="contact__box-title">
+					<h2 class="contact__title title-decoration-big title element-scroll-anim">Contact me</h2>
+				</div>
 
+				<div class="contact__box-center">
+					<h2 class="contact__center-title title element-scroll-anim">Have You Any Qestions?</h2>
+					<h3 class="contact__mini-title element-scroll-anim">I'M AT YOUR SERVICE</h3>
+				</div>
 
+				<div class="contact__info-item flex">
+					<div class="contact__box-icon element-scroll-anim">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill contact__icon" viewBox="0 0 16 16">
+							<path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+						</svg>
+						<h3 class="contact__icon-title element-scroll-anim">Call Us On</h3>
+						<p class="contact__icon-text element-scroll-anim">+7 (993) 377-20-60</p>
+					</div>
 
+					<div class="contact__box-icon element-scroll-anim">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill contact__icon" viewBox="0 0 16 16">
+							<path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+						</svg>
+						<h3 class="contact__icon-title element-scroll-anim">Email</h3>
+						<p class="contact__icon-text element-scroll-anim">maksim.pantelidi@yandex.ru</p>
+					</div>
+
+					<div class="contact__box-icon element-scroll-anim">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-telegram contact__icon" viewBox="0 0 16 16">
+							<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+						</svg>
+						<h3 class="contact__icon-title element-scroll-anim">Telegram</h3>
+						<p class="contact__icon-text element-scroll-anim">@Kind__Neko</p>
+					</div>
+
+					<div class="contact__box-icon element-scroll-anim">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-skype contact__icon" viewBox="0 0 16 16">
+							<path d="M4.671 0c.88 0 1.733.247 2.468.702a7.423 7.423 0 0 1 6.02 2.118 7.372 7.372 0 0 1 2.167 5.215c0 .344-.024.687-.072 1.026a4.662 4.662 0 0 1 .6 2.281 4.645 4.645 0 0 1-1.37 3.294A4.673 4.673 0 0 1 11.18 16c-.84 0-1.658-.226-2.37-.644a7.423 7.423 0 0 1-6.114-2.107A7.374 7.374 0 0 1 .529 8.035c0-.363.026-.724.08-1.081a4.644 4.644 0 0 1 .76-5.59A4.68 4.68 0 0 1 4.67 0zm.447 7.01c.18.309.43.572.729.769a7.07 7.07 0 0 0 1.257.653c.492.205.873.38 1.145.523.229.112.437.264.615.448.135.142.21.331.21.528a.872.872 0 0 1-.335.723c-.291.196-.64.289-.99.264a2.618 2.618 0 0 1-1.048-.206 11.44 11.44 0 0 1-.532-.253 1.284 1.284 0 0 0-.587-.15.717.717 0 0 0-.501.176.63.63 0 0 0-.195.491.796.796 0 0 0 .148.482 1.2 1.2 0 0 0 .456.354 5.113 5.113 0 0 0 2.212.419 4.554 4.554 0 0 0 1.624-.265 2.296 2.296 0 0 0 1.08-.801c.267-.39.402-.855.386-1.327a2.09 2.09 0 0 0-.279-1.101 2.53 2.53 0 0 0-.772-.792A7.198 7.198 0 0 0 8.486 7.3a1.05 1.05 0 0 0-.145-.058 18.182 18.182 0 0 1-1.013-.447 1.827 1.827 0 0 1-.54-.387.727.727 0 0 1-.2-.508.805.805 0 0 1 .385-.723 1.76 1.76 0 0 1 .968-.247c.26-.003.52.03.772.096.274.079.542.177.802.293.105.049.22.075.336.076a.6.6 0 0 0 .453-.19.69.69 0 0 0 .18-.496.717.717 0 0 0-.17-.476 1.374 1.374 0 0 0-.556-.354 3.69 3.69 0 0 0-.708-.183 5.963 5.963 0 0 0-1.022-.078 4.53 4.53 0 0 0-1.536.258 2.71 2.71 0 0 0-1.174.784 1.91 1.91 0 0 0-.45 1.287c-.01.37.076.736.25 1.063z"/>
+						</svg>
+						<h3 class="contact__icon-title element-scroll-anim">Skype</h3>
+						<p class="contact__icon-text element-scroll-anim">Kind Neko</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
 
 	</main>
-	<footer class="footer">
-    
-</footer>
-
 	<script src="js/main.min.js"></script>
 </body>
 
