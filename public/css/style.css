@@ -246,12 +246,14 @@ h3 {
   padding-bottom: 40px;
 }
 .home__button {
-  width: 300px;
-  color: #fff;
+  width: 200px;
   font-weight: bold;
   background-color: #ffa500;
   padding: 15px;
   border-radius: 50px;
+}
+.home__btn-link {
+  color: #fff;
 }
 
 .name {
@@ -520,14 +522,19 @@ h3 {
   margin-bottom: 80px;
 }
 .contact__center-title {
+  opacity: 0;
   color: #ffa500;
   padding-bottom: 20px;
+}
+.contact__mini-title {
+  opacity: 0;
 }
 .contact__info-item {
   text-align: center;
   align-items: center;
 }
 .contact__box-icon {
+  opacity: 0;
   margin: 0 auto;
 }
 .contact__icon {
