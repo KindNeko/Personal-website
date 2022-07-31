@@ -133,6 +133,26 @@ body {
   overflow: hidden;
 }
 
+.nav__hamburger {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  height: 25px;
+  width: 40px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 4px;
+}
+
+.nav__hamburger-section {
+  height: 2px;
+  width: 30px;
+  background-color: #adadad;
+}
+
 h3 {
   font-weight: bold;
 }
@@ -143,7 +163,7 @@ h3 {
 }
 
 .section-scroll {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .flex {
@@ -341,13 +361,13 @@ h3 {
   padding-right: 10px;
 }
 .nav__items {
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 .nav__link {
   color: #adadad;
   line-height: 25px;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 1px;
   font-weight: bold;
   position: relative;
   display: inline-block;
@@ -367,6 +387,10 @@ h3 {
   color: #ffa500;
 }
 
+.main {
+  position: relative;
+}
+
 .about {
   flex-direction: column;
   align-items: start;
@@ -380,11 +404,11 @@ h3 {
   margin-top: 30px;
   margin-left: 15px;
 }
-.about__content-titile {
-  opacity: 0;
+.about__content-title {
   font-size: 20px;
   font-weight: 700;
   padding-bottom: 15px;
+  opacity: 0;
 }
 .about__content-text {
   margin-bottom: 30px;
@@ -505,6 +529,7 @@ h3 {
   border-radius: 10px;
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.6);
   opacity: 0;
+  margin-bottom: 20px;
 }
 
 .contact {
@@ -531,7 +556,6 @@ h3 {
 }
 .contact__info-item {
   text-align: center;
-  align-items: center;
 }
 .contact__box-icon {
   opacity: 0;
@@ -541,4 +565,377 @@ h3 {
   display: inline-block;
   width: 45px;
   color: orange;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    width: 75%;
+    padding: 10px;
+  }
+  .title-decoration-big {
+    opacity: 1;
+  }
+  .element-scroll-anim {
+    transform: translateY(0);
+  }
+  .element-scroll-anim.element-show {
+    opacity: 1;
+    transition: all 3s;
+    transform: translateY(0%);
+  }
+  .header .home__title {
+    line-height: 44px;
+  }
+  .about__my-information {
+    flex-direction: column;
+  }
+  .about__list {
+    margin-bottom: 30px;
+  }
+  .about__title {
+    opacity: 1;
+  }
+  .about__content-title {
+    opacity: 1;
+  }
+  .about__content-text {
+    opacity: 1;
+  }
+  .about .my-information__box-title {
+    opacity: 1;
+  }
+  .about .about-skills {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    opacity: 1;
+  }
+  .portfolio__project-title {
+    opacity: 1;
+  }
+  .portfolio__list {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 50px;
+  }
+  .portfolio__site {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+  .header .home__title {
+    line-height: 44px;
+  }
+  .sidebar {
+    transform: translateY(-100%);
+    transition: 0.5s ease;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #151515;
+    box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.5);
+    padding: 80px;
+    justify-content: center;
+  }
+  .show-menu {
+    transform: translateY(0);
+  }
+  .box-logo {
+    position: absolute;
+    top: 50px;
+    height: 55px;
+    width: 150px;
+    justify-content: center;
+  }
+  .box-logo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-top: 3px solid #000;
+    border-left: 3px solid #000;
+  }
+  .box-logo::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-bottom: 3px solid orange;
+    border-right: 3px solid orange;
+  }
+  .logo {
+    color: #0a0a0a;
+    font-family: "Federo", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 24px;
+  }
+  .nav__list {
+    text-align: right;
+    flex-direction: column;
+  }
+  .nav__icon {
+    padding-right: 8px;
+  }
+  .nav__items {
+    padding-bottom: 20px;
+  }
+  .nav__link {
+    color: #adadad;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px solid silver;
+    padding-bottom: 5px;
+    transition: 0.5s;
+  }
+  .nav__link:hover {
+    color: #ffa500;
+  }
+  .nav__hamburger {
+    opacity: 1;
+    z-index: 10;
+    position: fixed;
+  }
+  .about {
+    width: 100%;
+  }
+  .about__my-information {
+    flex-direction: column;
+  }
+  .about__list {
+    margin-bottom: 30px;
+  }
+  .about__title {
+    opacity: 1;
+  }
+  .about__content-title {
+    opacity: 1;
+  }
+  .about__content-text {
+    opacity: 1;
+  }
+  .about .my-information__box-title {
+    opacity: 1;
+  }
+  .about .about-skills {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    opacity: 1;
+  }
+  .portfolio__project-title {
+    opacity: 1;
+  }
+  .portfolio__list {
+    margin-left: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 30px;
+  }
+  .portfolio__site {
+    opacity: 1;
+  }
+  .contact__title {
+    opacity: 1;
+  }
+  .contact__center-title {
+    opacity: 1;
+  }
+  .contact__mini-title {
+    opacity: 1;
+  }
+  .contact__box-icon {
+    opacity: 1;
+  }
+  .contact__icon-title {
+    opacity: 1;
+  }
+  .contact__icon-text {
+    opacity: 1;
+  }
+  .contact__icon {
+    width: 25px;
+  }
+  .contact__icon-title {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .title-decoration-big {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 48px;
+    opacity: 0;
+  }
+  .title-decoration-big::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 40px;
+    height: 4px;
+    background-color: orange;
+  }
+  .title-decoration-big::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 20px;
+    height: 4px;
+    background-color: orange;
+    margin-top: 10px;
+  }
+  body {
+    font-size: 14px;
+  }
+  .home {
+    flex: none;
+    justify-content: center;
+  }
+  .home__info {
+    margin-left: 15px;
+    width: 60%;
+    text-align: justify;
+  }
+  .home__title {
+    font-size: 27px;
+    padding-bottom: 30px;
+  }
+  .home__professions {
+    font-size: 25px;
+    padding-bottom: 30px;
+  }
+  .home__box-image {
+    display: none;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0;
+    position: relative;
+  }
+  .home__box-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 34px;
+    height: 34px;
+    border-top: 5px solid #000;
+    border-left: 5px solid #000;
+  }
+  .home__box-image::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 34px;
+    height: 34px;
+    border-bottom: 5px solid #ffa500;
+    border-right: 5px solid #ffa500;
+  }
+  .home__text {
+    padding-bottom: 20px;
+  }
+  .about__box-title {
+    margin-bottom: 30px;
+  }
+  .about__title {
+    font-size: 27px;
+    opacity: 1;
+  }
+  .about__box-text {
+    max-width: 440px;
+  }
+  .about__content-title {
+    font-size: 18px;
+  }
+  .about__my-information {
+    max-width: 440px;
+  }
+  .about .about-skills {
+    max-width: 440px;
+  }
+  .portfolio__content {
+    margin-left: 15px;
+    margin-top: 30px;
+  }
+  .portfolio__box-title {
+    margin-bottom: 30px;
+  }
+  .portfolio__title {
+    font-size: 27px;
+    opacity: 1;
+  }
+  .portfolio__project-title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .portfolio__project-title {
+    margin-bottom: 80px;
+  }
+  .portfolio__list {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(1, 0fr);
+    grid-gap: 30px;
+  }
+  .portfolio__site {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #ffa500;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.6);
+  }
+  .contact__title {
+    font-size: 27px;
+    opacity: 1;
+  }
+  .contact__center-title {
+    font-size: 27px;
+    opacity: 1;
+  }
+  .contact__mini-title {
+    opacity: 1;
+  }
+  .contact__box-icon {
+    text-align: center;
+    width: 440px;
+    opacity: 1;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ffa500;
+  }
+  .contact__info-item {
+    flex-direction: column;
+  }
+  .contact__icon-title {
+    float: left;
+    opacity: 1;
+    font-size: 15px;
+  }
+  .contact__icon-text {
+    opacity: 1;
+    font-size: 16px;
+  }
+  .contact__icon {
+    margin-right: 15px;
+    float: left;
+    width: 25px;
+  }
+  .contact__icon-title {
+    font-style: 10px;
+  }
 }
