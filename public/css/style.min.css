@@ -153,6 +153,10 @@ body {
   background-color: #adadad;
 }
 
+.lock {
+  overflow: hidden;
+}
+
 h3 {
   font-weight: bold;
 }
@@ -636,10 +640,10 @@ h3 {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #151515;
-    box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.5);
+    box-shadow: none;
     padding: 80px;
     justify-content: center;
+    z-index: 2;
   }
   .show-menu {
     transform: translateY(0);
@@ -708,7 +712,8 @@ h3 {
     z-index: 10;
     position: fixed;
   }
-  .about {
+  .about__content {
+    margin-left: 0;
     width: 100%;
   }
   .about__my-information {
@@ -734,17 +739,24 @@ h3 {
     margin-bottom: 30px;
     opacity: 1;
   }
+  .portfolio__content {
+    margin-left: 0;
+    width: 100%;
+  }
   .portfolio__project-title {
     opacity: 1;
   }
   .portfolio__list {
-    margin-left: 50px;
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     grid-gap: 30px;
   }
   .portfolio__site {
     opacity: 1;
+  }
+  .contact__content {
+    margin-left: 0;
+    width: 100%;
   }
   .contact__title {
     opacity: 1;
@@ -807,8 +819,8 @@ h3 {
     justify-content: center;
   }
   .home__info {
-    margin-left: 15px;
-    width: 60%;
+    margin-left: 0;
+    width: 100%;
     text-align: justify;
   }
   .home__title {
@@ -856,21 +868,11 @@ h3 {
     font-size: 27px;
     opacity: 1;
   }
-  .about__box-text {
-    max-width: 440px;
-  }
   .about__content-title {
     font-size: 18px;
   }
-  .about__my-information {
-    max-width: 440px;
-  }
   .about .about-skills {
-    max-width: 440px;
-  }
-  .portfolio__content {
-    margin-left: 15px;
-    margin-top: 30px;
+    width: 100%;
   }
   .portfolio__box-title {
     margin-bottom: 30px;
@@ -893,8 +895,8 @@ h3 {
     grid-gap: 30px;
   }
   .portfolio__site {
-    width: 300px;
-    height: 300px;
+    width: 320px;
+    height: 320px;
     border: 1px solid #ffa500;
     padding: 15px;
     border-radius: 10px;
@@ -913,7 +915,172 @@ h3 {
   }
   .contact__box-icon {
     text-align: center;
-    width: 440px;
+    width: 460px;
+    opacity: 1;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ffa500;
+  }
+  .contact__info-item {
+    flex-direction: column;
+    width: 100%;
+  }
+  .contact__icon-title {
+    float: left;
+    opacity: 1;
+    font-size: 15px;
+  }
+  .contact__icon-text {
+    opacity: 1;
+    font-size: 16px;
+  }
+  .contact__icon {
+    margin-right: 15px;
+    float: left;
+    width: 25px;
+  }
+  .contact__icon-title {
+    font-style: 10px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .title-decoration-big {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 48px;
+    opacity: 0;
+  }
+  .title-decoration-big::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 90%;
+    left: 0;
+    width: 40px;
+    height: 4px;
+    background-color: orange;
+  }
+  .title-decoration-big::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 90%;
+    left: 0;
+    width: 20px;
+    height: 4px;
+    background-color: orange;
+    margin-top: 10px;
+  }
+  body {
+    font-size: 13px;
+  }
+  .home {
+    flex: none;
+    justify-content: center;
+  }
+  .home__info {
+    width: 100%;
+    text-align: justify;
+    margin-left: 0;
+  }
+  .home__title {
+    font-size: 22px;
+    padding-bottom: 20px;
+  }
+  .home__professions {
+    font-size: 20px;
+    padding-bottom: 30px;
+  }
+  .home__box-image {
+    display: none;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0;
+    position: relative;
+  }
+  .home__box-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 34px;
+    height: 34px;
+    border-top: 5px solid #000;
+    border-left: 5px solid #000;
+  }
+  .home__box-image::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 34px;
+    height: 34px;
+    border-bottom: 5px solid #ffa500;
+    border-right: 5px solid #ffa500;
+  }
+  .home__text {
+    padding-bottom: 20px;
+  }
+  .about__box-title {
+    margin-bottom: 30px;
+  }
+  .about__title {
+    font-size: 22px;
+    opacity: 1;
+  }
+  .about__box-text {
+    max-width: 100%;
+  }
+  .about__content-title {
+    font-size: 18px;
+  }
+  .about__list {
+    grid-template-columns: repeat(1, 2fr);
+  }
+  .about .about-skills {
+    width: 100%;
+  }
+  .portfolio__box-title {
+    margin-bottom: 30px;
+  }
+  .portfolio__title {
+    font-size: 22px;
+    opacity: 1;
+  }
+  .portfolio__project-title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .portfolio__project-title {
+    margin-bottom: 80px;
+  }
+  .portfolio__list {
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+  .portfolio__site {
+    width: 90%;
+    height: 280px;
+    border: 1px solid #ffa500;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.6);
+  }
+  .contact__title {
+    font-size: 22px;
+    opacity: 1;
+  }
+  .contact__center-title {
+    font-size: 22px;
+    opacity: 1;
+  }
+  .contact__mini-title {
+    opacity: 1;
+  }
+  .contact__box-icon {
+    text-align: center;
+    max-width: 300px;
     opacity: 1;
     margin-bottom: 15px;
     border-bottom: 1px solid #ffa500;
@@ -931,7 +1098,7 @@ h3 {
     font-size: 16px;
   }
   .contact__icon {
-    margin-right: 15px;
+    margin-right: 10px;
     float: left;
     width: 25px;
   }
