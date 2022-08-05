@@ -157,6 +157,10 @@ body {
   overflow: hidden;
 }
 
+.title-decoration {
+  color: #ffa500;
+}
+
 h3 {
   font-weight: bold;
 }
@@ -213,6 +217,10 @@ h3 {
   transform: translateY(0%);
 }
 
+.text-orange {
+  color: #ffa500;
+}
+
 .header__content {
   position: relative;
   float: right;
@@ -265,6 +273,9 @@ h3 {
   height: 34px;
   border-bottom: 5px solid #ffa500;
   border-right: 5px solid #ffa500;
+}
+.home__images {
+  width: 300px;
 }
 .home__text {
   padding-bottom: 40px;
@@ -384,10 +395,6 @@ h3 {
 }
 
 .active-link {
-  color: #ffa500;
-}
-
-.title-decoration {
   color: #ffa500;
 }
 
@@ -534,6 +541,8 @@ h3 {
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.6);
   opacity: 0;
   margin-bottom: 20px;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .contact {
@@ -1054,7 +1063,8 @@ h3 {
     margin-bottom: 80px;
   }
   .portfolio__list {
-    margin-left: 30px;
+    margin-left: 25px;
+    width: 150%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
